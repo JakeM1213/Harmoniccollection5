@@ -1,0 +1,220 @@
+body {
+    font-family: 'Caveat', sans-serif;
+    background-image: url(https://media.giphy.com/media/3o8dFsC5BOgru9OoM0/giphy.gif);
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+header {
+    background-color: #d72525;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5em;
+    animation: rainbowFlash 3s infinite;
+}
+
+@keyframes rainbowFlash {
+    0% {
+        color: violet;
+    }
+    16.666% {
+        color: indigo;
+    }
+    33.333% {
+        color: blue;
+    }
+    50% {
+        color: green;
+    }
+    66.666% {
+        color: yellow;
+    }
+    83.333% {
+        color: orange;
+    }
+    100% {
+        color: red;
+    }
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+nav button {
+    font-family: 'Caveat', sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #ef1010;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+.gallery-row {
+    margin-bottom: 30px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.image-row img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.image-row:not(:last-child) {
+    border-bottom: 10px solid #de7e00;
+    margin-bottom: 10px;
+}
+
+.plane {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: #00f;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    animation: bouncePlane 2s ease-in-out infinite;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.wing {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+}
+
+.window {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #aaf;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+@keyframes bouncePlane {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+}
+
+.div-img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 20%;
+}
+
+img {
+    transition: transform 0.2s, background-color 0.2s;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+img:hover {
+    transform: rotate(360deg);
+    background-color: #ff5733;
+}
+
+.image-rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-row img {
+    max-width: 1000px;
+    height: auto;
+    margin: 5px;
+}
+
+.image-row:not(:last-child) {
+    border-bottom: 10px solid #de7e00;
+    margin-bottom: 10px;
+}
+
+@keyframes moveBorder {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for tablets and smaller screens */
+    header {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjustments for smartphones */
+    header {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    nav {
+        top: 2px;
+        right: 5px;
+    }
+
+    footer {
+        font-size: 0.6em;
+        padding: 2px;
+    }
+
+    .image-row img {
+        margin: 2px;
+    }
+}
